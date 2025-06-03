@@ -87,11 +87,10 @@ const HeroSection = () => {
           {/* Right Content - Logo */}
           <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-fenix-red to-fenix-orange rounded-full filter blur-2xl opacity-20 animate-pulse-slow"></div>
               <img 
                 src="/lovable-uploads/1a7c4173-cb46-44ef-8a5f-b72fb67287e6.png" 
                 alt="Metalúrgica Fênix - Logo" 
-                className="relative w-80 h-80 md:w-96 md:h-96 object-contain animate-float drop-shadow-2xl"
+                className="w-80 h-80 md:w-96 md:h-96 object-contain animate-float drop-shadow-2xl"
               />
             </div>
           </div>

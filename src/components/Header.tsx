@@ -46,7 +46,7 @@ const Header = () => {
             className="flex items-center space-x-3 cursor-pointer group"
           >
             <img 
-              src="/lovable-uploads/0d899a41-bbd6-40ae-b1fc-945ecac5eac5.png" 
+              src="/lovable-uploads/1a7c4173-cb46-44ef-8a5f-b72fb67287e6.png" 
               alt="Metalúrgica Fênix" 
               className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
             />

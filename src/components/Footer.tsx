@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, ArrowUp } from 'lucide-react';
 
@@ -27,7 +26,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-6">
               <img 
-                src="/lovable-uploads/0d899a41-bbd6-40ae-b1fc-945ecac5eac5.png" 
+                src="/lovable-uploads/1a7c4173-cb46-44ef-8a5f-b72fb67287e6.png" 
                 alt="Metalúrgica Fênix" 
                 className="h-16 w-auto"
               />

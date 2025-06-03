@@ -27,7 +27,6 @@ const Header = () => {
     { label: 'Início', id: 'inicio' },
     { label: 'Sobre Nós', id: 'sobre' },
     { label: 'Serviços', id: 'servicos' },
-    { label: 'Atendimento', id: 'atendimento' },
   ];
 
   return (
@@ -38,7 +37,7 @@ const Header = () => {
           : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-8 lg:px-16 xl:px-24 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div 

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, ArrowUp } from 'lucide-react';
 
@@ -20,7 +21,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-fenix-dark via-fenix-graphite to-fenix-dark text-white">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-8 lg:px-16 xl:px-24 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -132,7 +133,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-8 lg:px-16 xl:px-24 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 font-inter text-sm text-center md:text-left">
               <p>© {currentYear} Metalúrgica Fênix. Todos os direitos reservados.</p>

@@ -53,7 +53,7 @@ const HeroSection = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
               <button
                 onClick={scrollToServices}
                 className="group bg-fenix-red hover:bg-fenix-orange text-white px-8 py-4 rounded-full font-inter font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"

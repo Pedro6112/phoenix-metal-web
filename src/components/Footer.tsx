@@ -146,7 +146,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-700">
         <div className="container mx-auto px-8 lg:px-16 xl:px-24 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <div className="flex flex-col items-center justify-center gap-4 text-center">
             <div className="text-gray-400 font-inter text-sm text-center">
               <p>© {currentYear} Metalúrgica Fênix. Todos os direitos reservados.</p>
               <p className="mt-1">

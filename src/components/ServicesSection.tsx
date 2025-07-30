@@ -111,7 +111,7 @@ const ServicesSection = () => {
                   </div>
 
                   <button
-                    onClick={scrollToContact}
+                    onClick={() => window.open('https://wa.me/5517988163649', '_blank')}
                     className="group bg-fenix-red hover:bg-fenix-orange text-white px-8 py-3 rounded-full font-inter font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
                   >
                     Solicitar Orçamento

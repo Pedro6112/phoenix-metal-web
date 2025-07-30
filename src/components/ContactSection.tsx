@@ -100,11 +100,11 @@ const ContactSection = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-fenix-red to-fenix-orange mx-auto mb-8"></div>
           <p className="text-gray-600 text-lg font-inter max-w-3xl mx-auto leading-relaxed">
-            Estamos prontos para atender você! Entre em contato e solicite seu orçamento personalizado.
+            Estamos prontos para atender você! Entre em contato conosco.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
           <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <h3 className="font-playfair font-semibold text-2xl md:text-3xl text-fenix-dark mb-8">
@@ -153,102 +153,6 @@ const ContactSection = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <div className="bg-white p-8 rounded-2xl shadow-xl">
-              <h3 className="font-playfair font-semibold text-2xl md:text-3xl text-fenix-dark mb-8">
-                Solicite um Orçamento
-              </h3>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-fenix-dark font-inter font-medium mb-2">
-                    Nome Completo *
-                  </label>
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-fenix-orange focus:outline-none transition-colors duration-300 font-inter"
-                      placeholder="Digite seu nome completo"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="phone" className="block text-fenix-dark font-inter font-medium mb-2">
-                    Telefone/WhatsApp *
-                  </label>
-                  <div className="relative">
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-fenix-orange focus:outline-none transition-colors duration-300 font-inter"
-                      placeholder="(17) 99999-9999"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-fenix-dark font-inter font-medium mb-2">
-                    Mensagem *
-                  </label>
-                  <div className="relative">
-                    <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={4}
-                      className="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-fenix-orange focus:outline-none transition-colors duration-300 font-inter resize-none"
-                      placeholder="Descreva seu projeto ou dúvida..."
-                    />
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-fenix-red to-fenix-orange hover:from-fenix-orange hover:to-fenix-red text-white py-4 rounded-xl font-inter font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      Enviando...
-                    </>
-                  ) : (
-                    <>
-                      <Send size={20} />
-                      Enviar Mensagem
-                    </>
-                  )}
-                </button>
-              </form>
-
-              <div className="mt-6 p-4 bg-green-50 rounded-xl border border-green-200">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-green-800 font-inter text-sm">
-                      <strong>Resposta rápida:</strong> Retornamos seu contato em até 2 horas durante o horário comercial.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Map Section */}

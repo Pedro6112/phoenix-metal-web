@@ -46,7 +46,7 @@ const HeroSection = () => {
                 </span>
               </h1>
               
-              <p className="text-gray-300 text-lg md:text-xl font-inter leading-relaxed max-w-2xl">
+              <p className="text-gray-300 text-lg md:text-xl font-inter leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Há mais de duas décadas oferecendo soluções completas em tratamento de superfícies 
                 com qualidade excepcional e atendimento personalizado.
               </p>

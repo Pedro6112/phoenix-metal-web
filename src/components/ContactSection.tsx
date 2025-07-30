@@ -15,16 +15,15 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: <Phone className="w-6 h-6 text-fenix-orange" />,
-      title: "Telefones",
+      title: "Telefone",
       details: [
-        "Alessandro: (17) 98816-3650",
-        "Vanessa: (17) 98816-3649"
+        "(17) 98816-3649"
       ]
     },
     {
       icon: <Mail className="w-6 h-6 text-fenix-orange" />,
       title: "E-mail",
-      details: ["fenixmetal_riopreto@hotmail.com"]
+      details: ["contatometalurgicafenix@gmail.com"]
     },
     {
       icon: <MapPin className="w-6 h-6 text-fenix-orange" />,
@@ -32,15 +31,15 @@ const ContactSection = () => {
       details: [
         "Rua Maria Jorge dos Santos, 516",
         "Estância Jockey Club",
-        "São José do Rio Preto – SP"
+        "São José do Rio Preto – SP",
+        "CEP: 15081-519"
       ]
     },
     {
       icon: <Clock className="w-6 h-6 text-fenix-orange" />,
       title: "Horário de Funcionamento",
       details: [
-        "Segunda à Sexta: 7h às 17h",
-        "Sábado: 7h às 12h"
+        "Segunda à Sexta: 8h às 17h"
       ]
     }
   ];
@@ -139,27 +138,18 @@ const ContactSection = () => {
               ))}
             </div>
 
-            {/* WhatsApp Buttons */}
+            {/* WhatsApp Button */}
             <div className="space-y-4">
               <h4 className="font-playfair font-semibold text-xl text-fenix-dark mb-4">
                 Fale conosco no WhatsApp:
               </h4>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <button
-                  onClick={() => handleWhatsApp('17988163650')}
-                  className="group bg-green-500 hover:bg-green-600 text-white p-4 rounded-xl font-inter font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
-                >
-                  <Phone size={20} />
-                  Alessandro
-                </button>
-                <button
-                  onClick={() => handleWhatsApp('17988163649')}
-                  className="group bg-green-500 hover:bg-green-600 text-white p-4 rounded-xl font-inter font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl"
-                >
-                  <Phone size={20} />
-                  Vanessa
-                </button>
-              </div>
+              <button
+                onClick={() => handleWhatsApp('17988163649')}
+                className="group bg-green-500 hover:bg-green-600 text-white p-4 rounded-xl font-inter font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3 shadow-lg hover:shadow-xl w-full"
+              >
+                <Phone size={20} />
+                Entrar em contato
+              </button>
             </div>
           </div>
 
@@ -269,7 +259,7 @@ const ContactSection = () => {
           <div className="bg-white p-6 rounded-2xl shadow-xl">
             <div className="aspect-video w-full rounded-xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.0123456789!2d-49.3855555!3d-20.8194444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDQ5JzEwLjAiUyA0OcKwMjMnMDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890123"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59652.235266462885!2d-49.39106992260531!3d-20.86137834187854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc4d8e294f6629%3A0xd0829e898f728480!2sMetalurgia%20f%C3%AAnix!5e0!3m2!1spt-BR!2sbr!4v1753881558623!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

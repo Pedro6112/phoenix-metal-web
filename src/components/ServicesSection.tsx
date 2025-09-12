@@ -15,7 +15,13 @@ const ServicesSection = () => {
         "Alta durabilidade",
         "Diversas cores e texturas"
       ],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
+      gallery: [
+        "/lovable-uploads/pintura-escadas-vermelhas.jpg",
+        "/lovable-uploads/pintura-perfis-vermelhos.jpg",
+        "/lovable-uploads/pintura-estruturas-vermelhas.jpg",
+        "/lovable-uploads/pintura-escada-preta.jpg"
+      ]
     },
     {
       icon: <Droplets className="w-12 h-12 text-fenix-orange" />,
@@ -120,17 +126,45 @@ const ServicesSection = () => {
                 </div>
               </div>
 
-              {/* Image */}
+              {/* Image/Gallery */}
               <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-fenix-red/20 to-fenix-orange/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
-                  <img 
-                    src={service.image}
-                    alt={service.title}
-                    className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/50 to-transparent rounded-2xl"></div>
-                </div>
+                {service.gallery ? (
+                  <div className="space-y-4">
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-br from-fenix-red/20 to-fenix-orange/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+                      <img 
+                        src={service.image}
+                        alt={service.title}
+                        className="relative w-full h-64 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/50 to-transparent rounded-2xl"></div>
+                    </div>
+                    
+                    {/* Gallery Grid */}
+                    <div className="grid grid-cols-2 gap-3">
+                      {service.gallery.map((imageUrl, imgIndex) => (
+                        <div key={imgIndex} className="relative group/gallery overflow-hidden rounded-xl">
+                          <img 
+                            src={imageUrl}
+                            alt={`Exemplo ${imgIndex + 1} - ${service.title}`}
+                            className="w-full h-32 object-cover group-hover/gallery:scale-110 transition-transform duration-300"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/30 to-transparent"></div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-gradient-to-br from-fenix-red/20 to-fenix-orange/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+                    <img 
+                      src={service.image}
+                      alt={service.title}
+                      className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/50 to-transparent rounded-2xl"></div>
+                  </div>
+                )}
               </div>
             </div>
           ))}

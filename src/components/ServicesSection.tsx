@@ -34,7 +34,9 @@ const ServicesSection = () => {
         "Maior aderência da tinta",
         "Processo rápido e eficiente"
       ],
-      image: "https://images.unsplash.com/photo-1581094271901-8022df4466f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+      gallery: [
+        "/lovable-uploads/jato-alta-pressao-resultado.jpg"
+      ]
     }
   ];
 
@@ -148,17 +150,7 @@ const ServicesSection = () => {
                     <CarouselPrevious className="left-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
                     <CarouselNext className="right-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
                   </Carousel>
-                ) : (
-                  <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-br from-fenix-red/20 to-fenix-orange/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
-                    <img 
-                      src={service.image}
-                      alt={service.title}
-                      className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/50 to-transparent rounded-2xl"></div>
-                  </div>
-                )}
+                ) : null}
               </div>
             </div>
           ))}

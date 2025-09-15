@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Zap, Droplets, Shield, Sparkles, CheckCircle, ArrowRight } from 'lucide-react';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const ServicesSection = () => {
   const services = [
@@ -15,7 +16,6 @@ const ServicesSection = () => {
         "Alta durabilidade",
         "Diversas cores e texturas"
       ],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80",
       gallery: [
         "/lovable-uploads/pintura-escadas-vermelhas.jpg",
         "/lovable-uploads/pintura-perfis-vermelhos.jpg",
@@ -129,31 +129,25 @@ const ServicesSection = () => {
               {/* Image/Gallery */}
               <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
                 {service.gallery ? (
-                  <div className="space-y-4">
-                    <div className="relative group">
-                      <div className="absolute inset-0 bg-gradient-to-br from-fenix-red/20 to-fenix-orange/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
-                      <img 
-                        src={service.image}
-                        alt={service.title}
-                        className="relative w-full h-64 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/50 to-transparent rounded-2xl"></div>
-                    </div>
-                    
-                    {/* Gallery Grid */}
-                    <div className="grid grid-cols-2 gap-3">
+                  <Carousel className="w-full">
+                    <CarouselContent>
                       {service.gallery.map((imageUrl, imgIndex) => (
-                        <div key={imgIndex} className="relative group/gallery overflow-hidden rounded-xl">
-                          <img 
-                            src={imageUrl}
-                            alt={`Exemplo ${imgIndex + 1} - ${service.title}`}
-                            className="w-full h-32 object-cover group-hover/gallery:scale-110 transition-transform duration-300"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/30 to-transparent"></div>
-                        </div>
+                        <CarouselItem key={imgIndex}>
+                          <div className="relative group overflow-hidden rounded-2xl">
+                            <div className="absolute inset-0 bg-gradient-to-br from-fenix-red/20 to-fenix-orange/20 rounded-2xl transform rotate-1 group-hover:rotate-3 transition-transform duration-300 z-0"></div>
+                            <img 
+                              src={imageUrl}
+                              alt={`Exemplo ${imgIndex + 1} - ${service.title}`}
+                              className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300 z-10"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/50 to-transparent rounded-2xl z-20"></div>
+                          </div>
+                        </CarouselItem>
                       ))}
-                    </div>
-                  </div>
+                    </CarouselContent>
+                    <CarouselPrevious className="left-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
+                    <CarouselNext className="right-4 bg-white/20 border-white/30 text-white hover:bg-white/30" />
+                  </Carousel>
                 ) : (
                   <div className="relative group">
                     <div className="absolute inset-0 bg-gradient-to-br from-fenix-red/20 to-fenix-orange/20 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>

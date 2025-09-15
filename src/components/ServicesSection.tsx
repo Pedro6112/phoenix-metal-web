@@ -138,9 +138,9 @@ const ServicesSection = () => {
                             <img 
                               src={imageUrl}
                               alt={`Exemplo ${imgIndex + 1} - ${service.title}`}
-                              className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300 z-10"
+                              className="relative w-full h-auto min-h-[300px] max-h-[500px] object-contain bg-gradient-to-br from-fenix-dark/50 to-fenix-graphite/50 rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300 z-10"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/50 to-transparent rounded-2xl z-20"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-fenix-dark/30 to-transparent rounded-2xl z-20"></div>
                           </div>
                         </CarouselItem>
                       ))}

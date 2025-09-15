@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, ArrowUp } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, ArrowUp, Facebook } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -12,6 +12,10 @@ const Footer = () => {
 
   const handleLinkedIn = () => {
     window.open('https://www.linkedin.com/company/metalurgica-fenix-rp/', '_blank');
+  };
+
+  const handleFacebook = () => {
+    window.open('https://www.facebook.com/share/1AGGp7S6cd/', '_blank');
   };
 
   const handleWhatsApp = (phone: string) => {
@@ -64,6 +68,13 @@ const Footer = () => {
                 title="Instagram"
               >
                 <Instagram size={20} />
+              </button>
+              <button
+                onClick={handleFacebook}
+                className="w-12 h-12 bg-blue-500/20 hover:bg-blue-500 text-blue-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+                title="Facebook"
+              >
+                <Facebook size={20} />
               </button>
               <button
                 onClick={handleLinkedIn}

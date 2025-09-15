@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, Phone, Instagram } from 'lucide-react';
+import { ArrowRight, Phone, Instagram, Facebook } from 'lucide-react';
 
 const HeroSection = () => {
   const handleWhatsApp = () => {
@@ -13,6 +13,10 @@ const HeroSection = () => {
 
   const handleLinkedIn = () => {
     window.open('https://www.linkedin.com/company/metalurgica-fenix-rp/', '_blank');
+  };
+
+  const handleFacebook = () => {
+    window.open('https://www.facebook.com/share/1AGGp7S6cd/', '_blank');
   };
 
   const scrollToServices = () => {
@@ -84,6 +88,12 @@ const HeroSection = () => {
                 className="w-12 h-12 bg-fenix-orange/20 hover:bg-fenix-orange text-fenix-orange hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
                 <Instagram size={20} />
+              </button>
+              <button
+                onClick={handleFacebook}
+                className="w-12 h-12 bg-blue-500/20 hover:bg-blue-500 text-blue-400 hover:text-white rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
+              >
+                <Facebook size={20} />
               </button>
               <button
                 onClick={handleLinkedIn}
